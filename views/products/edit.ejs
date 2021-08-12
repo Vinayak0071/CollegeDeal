@@ -1,0 +1,79 @@
+<% layout('layouts/boilerplate')%>
+    <div>
+        <div class="row">
+            <div class="col-md-6 offset-3">
+                <h1 class="text-center">Edit Product!</h1>
+                <form action="/products/<%=prod._id%>?_method=PUT" method="POST" class="needs-validation" novalidate>
+                    <div class="mb-1.5">
+                        <label for="name" class="form-label">Seller Name</label>
+                        <input type="text" class="form-control" id="name" name="product[seller_name]"
+                            value="<%=prod.seller_name%>" required>
+                        <div class="valid-feedback">
+                            Looks Good!
+                        </div>
+                    </div>
+                    <div class="mb-1.5">
+                        <label for="title" class="form-label">Title</label>
+                        <input type="text" class="form-control" id="title" name="product[title]" value="<%=prod.title%>"
+                            required>
+                        <div class="valid-feedback">
+                            Looks Good!
+                        </div>
+                    </div>
+                    <div class="mb-1.5">
+                        <label for="image" class="form-label">Image Url</label>
+                        <input type="text" class="form-control" id="image" name="product[image]" value="<%=prod.image%>"
+                            required>
+                        <div class="valid-feedback">
+                            Looks Good!
+                        </div>
+                    </div>
+                    <div class="mb-1.5">
+                        <label for="number" class="form-label">Phone Number</label>
+                        <input type="text" class="form-control" id="number" name="product[number]"
+                            value="<%=prod.number%>" required>
+                        <div class="valid-feedback">
+                            Looks Good!
+                        </div>
+                    </div>
+                    <div class="mb-1.5">
+                        <label for="price" class="form-label">Price</label>
+                        <div class="input-group mb-3">
+                            <span class="input-group-text">₹</span>
+                            <input type="text" class="form-control" id="price" placeholder="0.0"
+                                aria-label="Amount (to the nearest dollar)" name="product[price]"
+                                value="<%=prod.price%>" required>
+                            <div class="valid-feedback">
+                                Looks Good!
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mb-1.5">
+                        <label for="description" class="form-label">Description</label>
+                        <textarea class="form-control" type="text" id="description" name="product[description]"
+                            required><%= prod.description%></textarea>
+                        <div class="valid-feedback">
+                            Looks Good!
+                        </div>
+                    </div>
+                    <div class="mb-1.5">
+                        <label for="location" class="form-label">Location</label>
+                        <input type="text" class="form-control" id="location" name="product[location]"
+                            value="<%=prod.location%>" required>
+                        <div class="valid-feedback">
+                            Looks Good!
+                        </div>
+                    </div>
+                    <div class="row py-3">
+                        <div class="col-6 d-flex justify-content-center">
+                            <button class="btn btn-info">Edit</button>
+                        </div>
+                        <div class="col-6 d-flex justify-content-center">
+                            <a href="/products" class="btn btn-danger">Back to All</a>
+                        </div>
+                    </div>
+            </div>
+            </form>
+        </div>
+    </div>
+    </div>
