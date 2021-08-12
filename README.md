@@ -3,6 +3,6 @@ CollegeDeal is an ecommerce web application that is used in the trade of essenti
 
 Tech Stack
 
-# HTML/CSS/JS frontend
-# Node.js/Mongoose/Express/JOI/EJS backend
+- HTML/CSS/JS frontend
+- Node.js/Mongoose/Express/JOI/EJS backend
 
